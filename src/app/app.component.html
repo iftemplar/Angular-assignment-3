@@ -11,6 +11,6 @@
     </div>
     <button class="btn btn-success" (click)="onButtonClick()">Display Details</button>
     <p *ngIf="messageVisible">Secret Password = tuna</p>
-    <p *ngFor="let timeElement of timestamps" [ngClass]="{colored: i >= 5}">{{timeElement}}</p>
+    <p *ngFor="let timeElement of timestamps; let i = index" [ngClass]="{colored: i >= 4}">{{timeElement}}</p>
   </div>
 </div>
